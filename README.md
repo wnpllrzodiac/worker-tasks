@@ -83,7 +83,8 @@
       ```bash
          # V2ex
          ## 通过电脑浏览器提取 cookie
-         wrangler kv:key put --binding=data 'v2ex' '<COOKE_VALUE>'
+         # wrangler kv:key put --binding=data 'v2ex' '<COOKE_VALUE>' # not work
+         npx wrangler --binding=taskdata kv key put 'v2ex' '<COOKIE_VALUE>'
 
          # MegStudio
          ## 使用账号和密码，需要自建 OCR API 服务：https://github.com/sml2h3/ocr_api_server。
