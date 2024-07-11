@@ -1,10 +1,15 @@
-name = "tasks" # todo
+name = "mytasks" # todo
 main = "./src/index.ts"
 compatibility_date = "2023-04-16"
 
-kv_namespaces = [
-  { binding = "data", id = "8c7d7ee9b6bb4f8fa3ca9f30eaf8d897"}
-]
+#kv_namespaces = [
+#  { binding = "taskdata", id = "8bbf707da45c4357a25c83bc07e55fef"}
+#]
+
+[[kv_namespaces]]
+binding = "taskdata"
+preview_id = "c5efd5f12d6e49ca84c89dcbee5dd569"
+id = "8bbf707da45c4357a25c83bc07e55fef"
 
 [triggers]
-crons = ["15 */5 * * *"]
+crons = ["0 * * * *"]

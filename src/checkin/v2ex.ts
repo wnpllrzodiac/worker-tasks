@@ -2,8 +2,9 @@ import notify from "../notify"
 
 // v2ex check in
 const v2ex = async (env: any) => {
-  const cookie = await env.data.get("v2ex")
+  const cookie = await env.taskdata.get("v2ex")
   if (!cookie) {
+    console.log("failed to get cookie");
     return false
   }
 

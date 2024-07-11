@@ -2,15 +2,15 @@ import notify from "../notify"
 
 // megstudio check in
 const megstudio = async (env: any) => {
-  const usernameStr = await env.data.get("megstudio_username")
+  const usernameStr = await env.taskdata.get("megstudio_username")
   if (!usernameStr) {
     return false
   }
-  const passwordStr = await env.data.get("megstudio_password")
+  const passwordStr = await env.taskdata.get("megstudio_password")
   if (!passwordStr) {
     return false
   }
-  const ocrUrl = await env.data.get("ocr_url")
+  const ocrUrl = await env.taskdata.get("ocr_url")
   if (!ocrUrl) {
     return false
   }

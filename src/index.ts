@@ -3,6 +3,13 @@ import megstudio from "./checkin/megstudio"
 import domain from "./find/domain"
 
 export default {
+  async fetch(request, env, ctx): Promise<Response> {
+    const data = {
+      hello: "world",
+    };
+    return Response.json(data);
+  },
+
   async scheduled(event: any, env: any, ctx: any) {
     const results = await Promise.allSettled([
       // checkin
