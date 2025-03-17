@@ -198,8 +198,8 @@ wrangler kv:key delete --binding=data 'bark'
 2. 将相关值保存到 `KV namespace`，即每条命令后均添加参数 `--preview`
 
    ```bash
-      wrangler kv:key put --binding=data 'v2ex' '<COOKE_VALUE>' --preview
-      wrangler kv:key put --binding=data 'bark' '<BARK_TOKEN>' --preview
+      wrangler kv key put 'v2ex' '<COOKE_VALUE>' --binding=taskdata --preview
+      wrangler kv key put 'bark' '<BARK_TOKEN>' --binding=taskdata --preview
    ```
 
 3. 执行调试命令
@@ -224,6 +224,7 @@ wrangler kv:key delete --binding=data 'bark'
    ```
 
    按 `l` 显示相关的调试数据
+   http://localhost:8787/__scheduled?cron=*+*+*+*+*%22
 
 ## 仓库镜像
 
